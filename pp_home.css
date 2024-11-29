@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+
+/* Body Styles */
+
+body {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 960px;
+   min-width: 640px;
+   width: 95%;
+}
+
+/* Horizontal Navigation Styles */
+
+.Destination_Travel {
+   font-size: 18px; /* Change text size */
+   font-weight: bold; /* Make the text bold */
+   color: #007BFF; /* Set text color */
+   background-color: darkblue;
+   text-decoration: underline; /* Add underline */
+   font-family: Arial, sans-serif; /* Set font style */
+   text-align: center;
+}
+
+nav.horizontalNavigation li {
+   width: 20%;
+   float: left;
+   font-size: 0.8em;
+}
+
+.horizontalNavigation a {
+   display: block;
+   text-align: center;
+}
+
+/* Left Column Styles */
+
+#rightColumn {
+   clear: left;
+   float: right;
+   padding: 0;
+   width: 33%;
+   
+   
+   
+   
+}
+
+
+#rightColumn h1 {
+   color: yellow;
+   text-align: center;
+   
+}
+#rightColumn h2
+{
+   color: white;
+   text-align: center;
+} 
+
+
+/* Right Column Styles */
+#leftColumn {
+   float: left;
+   width: 67%;
+   
+}
+
+#leftColumn img {
+   display: block;
+   width: 100%;
+   padding:5px;
+}
+#leftColumn nav.horizontalNavigation p
+{
+   display: block;
+   padding: 5px;
+}
+.Desitnation_Travel
+{
+   width: 100%;
+   color: Yellow;
+   height: 30px;
+   display: block;
+   border: solid white;
+   text-align: centre;
+
+   
+
+}
+
+.photoLink1
+{
+   width: 100%;
+   display: block;
+   object-fit: cover;
+   height: 175px;
+   padding: 5px;
+   
+}
+
+
+
+
+
+/* Footer Styles */
+
+footer {
+   background-color: rgb(31, 54, 78);
+   clear: left;
+}
+
+footer::after {
+   clear: both;
+   content: "";
+   display: table;
+}
+
+footer>nav.verticalNavigation {
+   float: left;
+   width: 22%;
+}
+
+footer>section#contactInfo {
+   float: left;
+   width: 34%;
+}
+
+
+
+
+#header_title {
+   text-align: center;
+   font-size: 2em;
+   color: white;
+   text-shadow: 5px 5px 5px black;
+   padding: 50px 10px;
+   background-image: url(header_img.png);
+   background-size: cover;
+}

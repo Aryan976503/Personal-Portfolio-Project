@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="chocolate, chocolatier, cocoa, cacao, desserts" />
+    <title>Pandaisia Chocolates</title>
+    <link href="pp_reset.css" rel="stylesheet" />
+    <link href="pp_styles1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="pp_contact.css">
+  
+    
+</head>
+
+<body>
+    <header>
+        <div id="header_title">Aryan's Page</div>
+        <!-- <img src="https://picsum.photos/200/50" alt="Pandaisia Chocolates" /> -->
+        <nav class="horizontalNavigation">
+            <ul>
+                <li><a href="pp_home.html">Home</a></li>
+                <li><a href="portfolio.html">Top Choices</a></li>
+                <li><a href="mycourses.html">My Courses</a></li>
+                <li><a href="pp_aboutme.html">About Me</a></li>
+                <li><a href="pp_contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        #confirmation-message
+        {
+            color: blue;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+        .feedback-entry
+        {
+            border: 1px solid #ddd;
+            padding : 10px;
+            margin-bottom : 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
+
+    <script>
+        function submitFeedback() {
+            // Retrieve form values
+            const name = document.getElementById("name-input").value;
+            const email = document.getElementById("email-input").value;
+            const rating = document.getElementById("rating-input").value;
+            
+            const feedback = document.getElementById("feedback-input").value;
+
+            // Validate input fields
+            if (!name || !email || !rating || !feedback) {
+                alert("Please complete all fields before submitting.");
+                return;
+            }
+
+            // Construct and display a personalized confirmation message
+            const message = `Thank you, ${name}! Your feedback has been received.`;
+            const confirmationMessage = document.getElementById("confirmation-message");
+            confirmationMessage.innerText = message;
+            confirmationMessage.style.display = "block";
+
+            // Add the feedback entry to the log
+            const feedbackLog = document.getElementById("feedback-log");
+            const newEntry = document.createElement("div");
+            newEntry.className = "feedback-entry";
+            newEntry.innerHTML = `
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Rating:</strong> ${rating} / 5</p>
+                <p><strong>Feedback:</strong> ${feedback}</p>
+                <p><em>Submitted on: ${new Date().toLocaleString()}</em></p>
+            `;
+            feedbackLog.appendChild(newEntry);
+
+            // Clear the form fields
+            document.getElementById("name-input").value = "";
+            document.getElementById("email-input").value = "";
+            document.getElementById("rating-input").value = "";
+            document.getElementById("feedback-input").value = "";
+        }
+    </script>
+    <body>
+        <br>
+        <h2>Contact Me</h2>
+        <br>
+        <form onsubmit="event.preventDefault(); submitFeedback();">
+            <label for="name-input">Name:</label>
+            <input type="text" id="name-input" placeholder="Enter your First name">
+            <label for="name-input">Last Name:</label>
+            <input type="text" id="name-input" placeholder="Enter your First name"><br><br>
+            <label for="email-input">Email:</label>
+            <input type="email" id="email-input" placeholder="Enter your email"><br><br>
+
+            <label for = "comment"> Gender:</label>
+            
+            <div>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </label>
+                <label for="Not-Specified">
+                    <input type="radio" id="Not-Specified" name="gender" value="Not-Specified"> Not-Specified
+                </label>
+            </div>
+            <br>
+            <label for="rating-input">Rating (1-5):</label>
+            <input type="number" id="rating-input" min="1" max="5" placeholder="Rate us"><br>
+
+            <br>
+            <div>
+                <label for = "country">Select Your Country</label>
+                <select id = "country" name= "country" required>
+                    <option value = "USA">United States</option>
+                    <option value = "Canada">Canada</option>
+                    <option value = "India">India</option>
+                    <option value = "United Kingdom">United Kingdom</option>
+                    <option value = "Australia">Australia</option>
+                </select>
+            </div>
+            <br>
+
+            <label for="feedback-input">Feedback:</label><br>
+            <textarea id="feedback-input" rows="5" cols="50" placeholder="Enter your feedback here"></textarea><br><br>
+            <button type = "submit">Submit</button>
+            
+        </form>
+        
+        <p id = "confirmation-message">confirmationmessage</p>
+        <div id="feedback-log">
+            <h3>Feedback Log</h3>
+        </div>
+
+    </body>
+    <footer>
+        <nav class="verticalNavigation">
+           <h1>Projects</h1>
+           <ul>
+              <li><a href="practice.html">Calculator in Javascript</a></li>
+              <li><a href="color_changing_box.html">Color Changing Square</a></li>
+              <li><a href="#"></a></li>
+           </ul>
+        </nav>
+        <nav class="verticalNavigation">
+           <h1>Social Media</h1>
+           <ul>
+              <li><a href="https://x.com/">Twitter</a></li>
+              <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+           </ul>
+        </nav>
+        <nav class="verticalNavigation">
+           <h1>Hobbies</h1>
+           <ul>
+              <li><a href="Arduino.html">Programming Arduino</a></li>
+              <li><a href="yoga.html">Yoga</a></li>
+           </ul>
+        </nav>
+        <section id="contactInfo">
+           <h1>My Location &amp; Contacts</h1>
+           <p >2102-7077 Beresford Street,Burnaby</p>
+           <p>BC, Canada, V5E4J5</p>
+  
+           <p>Toll Free: 1-778-709-2911</p>
+        </section>
+     </footer>
+</body>
+
+</html>

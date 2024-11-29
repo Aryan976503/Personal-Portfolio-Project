@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+
+/* Body Styles */
+
+body {
+   margin-left: auto;
+   margin-right: auto;
+   max-width: 960px;
+   min-width: 640px;
+   width: 95%;
+}
+
+/* Horizontal Navigation Styles */
+nav.horizontalNavigation li {
+   width: 20%;
+   float: left;
+   font-size: 0.7em;
+}
+
+.horizontalNavigation a {
+   display: block;
+   text-align: center;
+}
+
+
+/* Footer Styles */
+footer {
+   background-color: rgb(36, 106, 181);
+   clear: left;
+}
+
+footer::after {
+   clear: both;
+   content: "";
+   display: table;
+}
+
+footer>nav.verticalNavigation {
+   float: left;
+   width: 22%;
+}
+
+footer>section#contactInfo {
+   float: left;
+   width: 34%;
+}
+
+#header_title {
+   text-align: center;
+   font-size: 2em;
+   color: white;
+   text-shadow: 5px 5px 5px black;
+   padding: 50px 10px;
+   background-image: url(header_img.png);
+   background-size: cover;
+}
+/* General reset (if not already defined in pp_reset.css) */
+
+ 
+ /* Main container styling */
+ 
+ 
+ /* Image styling */
+
+ /* Right-side content (logo + description) */
+
+
+ 
+ 
+ 
+ 
+.main {
+   display: grid;
+   grid-template-columns: 1fr 1fr; /* Two equal columns */
+   grid-template-rows: auto auto; /* Rows adjust to content */
+   gap: 20px; /* Space between elements */
+   width: 100%;
+   max-width: 1200px;
+   background: #ffffff;
+   padding: 20px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+}
+
+/* Left column: Image */
+.image {
+   grid-column: 1 / 2; /* Occupies the entire left column */
+   grid-row: 1 / 3; /* Spans two rows */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border: red solid 5px;
+}
+
+.image img {
+   max-width: 100%;
+   height: 100%;
+   border-radius: 8px;
+}
+
+/* Right column: Logo and Description */
+.logo {
+   grid-column: 2 / 3; /* Occupies the right column */
+   grid-row: 1 / 2; /* First row on the right */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.logo img {
+   max-width: 100%;
+   height: 100%;
+   border: red solid 5px;
+}
+
+.descript {
+   grid-column: 2 / 3; /* Occupies the right column */
+   grid-row: 2 / 3; /* Second row on the right */
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   padding: 10px;
+   text-align: justify;
+   border: red solid 5px;
+}

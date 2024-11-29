@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Form</title>
+    <style>
+        #confirmation-message 
+        {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            display: none; /* Initially hidden */
+        }
+    </style>
+    <script>
+        function submit() {
+           
+            const name = document.getElementById("name-input").value;
+            const email = document.getElementById("email").value;
+            const reason = document.getElementById("Reason to Collab with me ").value;
+         
+            
+            if (name && complaint) {
+                
+                const message = `Thank you, ${name}! Your complaint has been received.`;
+                
+                
+                const confirmationMessage = document.getElementById("confirmation-message");
+                confirmationMessage.innerText = message;
+                confirmationMessage.style.display = "block";
+
+                
+                document.getElementById("name-input").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("complaint-input").value = "";
+            } else {
+                alert("Please fill in both fields before submitting.");
+            }
+    </script>
+</head>
+<body>
+    <h2>Complaint Form</h2>
+    <form onsubmit="event.preventDefault(); submit();">
+        <label for="name-input">Name:</label><br>
+        <input type="text" id="name-input" placeholder="Enter your name"><br><br>
+        <label for="email-input">Email: </label><br>
+        <input type="text" id="email-input" placeholder="Enter your email"><br><br>
+        <label for="complaint-input">Complaint:</label><br>
+        <textarea id="complaint-input" rows="4" cols="50" placeholder="Describe your complaint"></textarea><br><br>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <!-- Confirmation message that will be displayed upon successful submission -->
+    <p id="confirmation-message">Thank you I will contact you soon</p>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body
+{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    min-width: 640px;
+}
+header
+{
+    padding-bottom: 5px;
+    
+    
+}
+nav.verticalNavigation a:link, 
+nav.verticalNavigation a:visited {
+   color: rgb(158, 51, 24);
+}
+
+nav.verticalNavigation a:hover, 
+nav.verticalNavigation a:active {
+   text-decoration: underline;
+}
+.horizontalNavigation
+{
+    display: flex;
+    justify-content: flex-end;
+    
+    background-color: antiquewhite;
+    padding: 10px;
+}
+.horizontalNavigation ul
+{
+    display: flex;
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+}
+.horizontalNavigation li
+{
+    margin-left: 30px;
+   
+}
+
+
+.horizontalNavigation a
+{
+    text-decoration: none;
+    color: darkslategrey;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    flex-direction: row;
+    transition: background-color 0.3s
+}
+.horizontalNavigation a:hover
+{
+    background-color: #e9dcdc;
+}
+
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-images {
+    display: flex;
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-images li {
+    flex: 0 0 100%; 
+    text-align: center; 
+    background-color: bisque;
+   
+
+  }
+  
+  .carousel-images img {
+    width: 100%; 
+    height: 70%;
+    
+    
+  }
+  
+  .carousel-images p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  

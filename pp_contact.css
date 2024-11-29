@@ -1,0 +1,95 @@
+body {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    min-width: 640px;
+    width: 95%;
+ }
+ 
+ /* Horizontal Navigation Styles */
+ nav.horizontalNavigation li {
+    width: 20%;
+    float: left;
+    font-size: 0.7em;
+ }
+ 
+ .horizontalNavigation a {
+    display: block;
+    text-align: center;
+ }
+ 
+ 
+ /* Footer Styles */
+ footer {
+    background-color: rgb(36, 106, 181);
+    clear: left;
+ }
+ 
+ footer::after {
+    clear: both;
+    content: "";
+    display: table;
+ }
+ 
+ footer>nav.verticalNavigation {
+    float: left;
+    width: 22%;
+ }
+ 
+ footer>section#contactInfo {
+    float: left;
+    width: 34%;
+ }
+ 
+ #header_title {
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    padding: 50px 10px;
+    
+    background-size: cover;
+ }
+.main
+{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input[type= "email"], textarea {
+    height: 50; /* Make the comment box taller */
+    width: 50%;
+    
+
+}
+input[type= "comment"] {
+    height: 100px; /* Make the comment box taller */
+    width: 100%;
+    
+}
+
+button[type="submit"] 
+{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #d07519;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form
+{
+   max-width: 900px;
+   color: #007bff;
+   
+}
+    

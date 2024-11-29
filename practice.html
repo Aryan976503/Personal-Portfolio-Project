@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Math Operations</title>
+</head>
+<body>
+    <h2>Basic Math Operations</h2>
+    <div id="result"></div>
+    <!--
+    <script>
+        const num1 = Number(prompt("Enter the first number: "));
+        const num2 = Number(prompt("Enter the second number: "));
+        if(isNan(num1) || isNan(num2)){
+            alert("Please enter valid numbers!: ");
+            location.reload();
+        }
+        else
+        {
+            let result = `<p>First Number: ${num1}</p><p>Second Number: ${num2}</p>`;
+            result += `<p> Addition: ${num1} + ${num2} = ${num1 + num2}</p>`;
+            result += `<p> Subtraction: ${num1} - ${num2} = ${num1 - num2}</p>`
+            result += `<p> Multiplication: ${num1} * ${num2} = ${num1 * num2}</p>`
+            result += `<p> Division ${num1} / ${num2} = ${num1/ num2}</p>`
+            if (num2 !== 0) {
+                result += `<p>Division: ${num1} / ${num2} = ${num1 / num2}</p>`;
+            } else {
+                result += `<p>Division: Cannot divide by zero!</p>`;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    
+    </script>
+    -->
+    <script>
+        // Prompt the user to enter two numbers
+        const num1 = Number(prompt("Enter the first number:"));
+        const num2 = Number(prompt("Enter the second number:"));
+
+        // Check if the input values are valid numbers
+        if (isNaN(num1) || isNaN(num2)) {
+            alert("Please enter valid chikorita numbers!");
+            location.reload();
+        } else {
+            // Initialize the result string
+            let result = `<p>First Number: ${num1}</p><p>Second Number: ${num2}</p>`;
+            
+            // Perform addition
+            result += `<p>Addition: ${num1} + ${num2} = ${num1 + num2}</p>`;
+            
+            // Perform subtraction
+            result += `<p>Subtraction: ${num1} - ${num2} = ${num1 - num2}</p>`;
+            
+            // Perform multiplication
+            result += `<p>Multiplication: ${num1} * ${num2} = ${num1 * num2}</p>`;
+            
+            // Perform division with zero check
+            if (num2 !== 0) {
+                result += `<p>Division: ${num1} / ${num2} = ${num1 / num2}</p>`;
+            } else {
+                result += `<p>Division: Cannot divide by zero!</p>`;
+            }
+            
+            // Display the results on the document
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+    
+</body>
+</html>
