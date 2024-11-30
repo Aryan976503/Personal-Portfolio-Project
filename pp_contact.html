@@ -60,7 +60,6 @@
                 return;
             }
 
-            // Construct and display a personalized confirmation message
             const message = `Thank you, ${name}! Your feedback has been received.`;
             const confirmationMessage = document.getElementById("confirmation-message");
             confirmationMessage.innerText = message;
@@ -71,15 +70,15 @@
             const newEntry = document.createElement("div");
             newEntry.className = "feedback-entry";
             newEntry.innerHTML = `
-                <p><strong>Name:</strong> ${name}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Rating:</strong> ${rating} / 5</p>
-                <p><strong>Feedback:</strong> ${feedback}</p>
+                <p>Name: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Rating: ${rating} / 5</p>
+                <p>Feedback: ${feedback}</p>
                 <p><em>Submitted on: ${new Date().toLocaleString()}</em></p>
             `;
             feedbackLog.appendChild(newEntry);
 
-            // Clear the form fields
+            // Clears the form fields after the user hits enter 
             document.getElementById("name-input").value = "";
             document.getElementById("email-input").value = "";
             document.getElementById("rating-input").value = "";
@@ -91,7 +90,7 @@
         <h2>Contact Me</h2>
         <br>
         <form onsubmit="event.preventDefault(); submitFeedback();">
-            <label for="name-input">Name:</label>
+            <label for="name-input">First Name:</label>
             <input type="text" id="name-input" placeholder="Enter your First name">
             <label for="name-input">Last Name:</label>
             <input type="text" id="name-input" placeholder="Enter your First name"><br><br>

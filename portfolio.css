@@ -1,20 +1,22 @@
 
-* {
+* 
+{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 
-body {
+body 
+{
     font-family: Arial, sans-serif;
     background-color: #dac3c3;
-
     line-height: 1.6;
 }
 
 
-.holiday-ideas {
+.holiday-ideas 
+{
     width: 100%; 
     max-width: 1200px; 
     margin: 0 auto; 
@@ -22,15 +24,7 @@ body {
     text-align: center; 
     background-color: white;
 }
-.tasty-food {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 40px;
-    text-align: center; 
-    background-color: white;
-}
-.cricket
+.tasty-food 
 {
     width: 100%; 
     max-width: 1200px; 
@@ -38,10 +32,10 @@ body {
     padding: 40px;
     text-align: center; 
     background-color: white;
-
 }
 
-/* Heading Section */
+
+
 .heading h1 {
     font-size: 2.4rem;
     color: #227c70;
@@ -55,28 +49,32 @@ body {
 }
 
 
-.ideas {
+.ideas 
+{
     display: flex; 
     flex-wrap: wrap; 
     justify-content: space-around; 
     gap: 20px; 
 
 }
-.idea {
+.idea 
+{
     background: #2f2828; 
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Using rgba instead of rgb*/
     width: 200px; 
     padding: 20px;
     text-align: center; 
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s; 
 }
 
-.idea:hover {
+.idea:hover 
+{
     transform: translateY(-10px); 
 }
 
-.idea img {
+.idea img 
+{
     width: 100%; 
     height: 200px; 
     object-fit: cover; 
@@ -84,13 +82,15 @@ body {
     margin-bottom: 10px;
 }
 
-.idea h3 {
+.idea h3 
+{
     font-size: 1.5rem;
     color: #bfc5d0;
     margin-bottom: 10px;
 }
 
-.idea p {
+.idea p 
+{
     font-size: 1rem;
     color: #c0b5b5;
     margin-bottom: 15px;
@@ -101,40 +101,24 @@ body {
     background-color: #227c70;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
-.idea button:hover {
+.idea button:hover 
+{
     background-color: #1a5a50; 
 }
 
-@media screen and (max-width: 375px) and (max-height: 667px) {
-    .ideas {
-        flex-direction: row; 
-        align-items: center; 
-        gap: 20px; 
-    }
 
-    .idea {
-        width: 90%; 
-        max-width: none; 
-    }
-
+@media screen and (max-width: 393px) and (max-height: 851px) {
     .idea img {
         aspect-ratio: 1 / 1; 
-        width: 100%; 
-        max-height: 200px; 
-        object-fit: cover; 
-    }
-    @media screen and (max-width: 393px) and (max-height: 851px) {
-        .idea img {
-            aspect-ratio: 1 / 1; 
-        }
-    }
-
-    .idea button {
-        padding: 8px 16px; 
     }
 }
+
+.idea button {
+    padding: 8px 16px; 
+}
+
